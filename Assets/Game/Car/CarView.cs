@@ -12,6 +12,7 @@ public class CarView : ConnectableMonoBehaviour
     [SerializeField] private HealthProvider healthProvider;
     [SerializeField] private ParticleSystem deadEffect, driveEffect;
     [SerializeField] private TurretController turretController;
+    [SerializeField] private RotationLocker rotationLocker;
     public HealthProvider HealthProvider => healthProvider;
     private void Awake()
     {
@@ -45,6 +46,8 @@ public class CarView : ConnectableMonoBehaviour
         {
             wheel.Rotate(tileGenerator.TileSpeed);
         }
+
+        rotationLocker.Tick(Time.fixedDeltaTime);
     }
 
     private TileView GetClosestTile()

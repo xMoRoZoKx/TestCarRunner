@@ -23,6 +23,7 @@ public class TileView : MonoBehaviour
     {
         foreach (var randomObject in randomObjects)
         {
+            if (randomObject == null) continue;
             randomObject.Tick(dt);
         }
     }

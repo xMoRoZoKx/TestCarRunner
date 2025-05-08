@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LockRotator : MonoBehaviour
+public class RotationLocker : MonoBehaviour
 {
     private Quaternion _initialLocalRotation;
 
@@ -9,7 +9,7 @@ public class LockRotator : MonoBehaviour
         _initialLocalRotation = transform.rotation;
     }
 
-    private void LateUpdate()
+    public void Tick(float dt)
     {
         transform.rotation = _initialLocalRotation;
     }

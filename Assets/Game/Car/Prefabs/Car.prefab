@@ -58,6 +58,7 @@ MonoBehaviour:
   deadEffect: {fileID: 9198635989981533961}
   driveEffect: {fileID: 3106904907500286044}
   turretController: {fileID: 1692916452285009689}
+  rotationLocker: {fileID: 3784227581743756499}
 --- !u!114 &2777538617004538393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +307,7 @@ GameObject:
   - component: {fileID: 1862538676851950637}
   - component: {fileID: 3784227581743756499}
   m_Layer: 0
-  m_Name: LockRotate
+  m_Name: RotationLocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

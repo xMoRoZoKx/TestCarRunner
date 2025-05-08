@@ -12,6 +12,7 @@ public class StickmanView : RandomizedTileObject
     [SerializeField] private SkinnedMeshRenderer meshRenderer;
     [SerializeField] private DamageState damageState;
     [SerializeField] private DeathState deathState;
+    [SerializeField] private RotationLocker rotationLocker;
 
     private IStickmanState currentState;
     private Transform target;
@@ -36,6 +37,7 @@ public class StickmanView : RandomizedTileObject
     public override void Tick(float dt)
     {
         currentState?.UpdateState(this);
+        rotationLocker?.Tick(dt);
     }
 
     public void TransitionToState(IStickmanState newState)

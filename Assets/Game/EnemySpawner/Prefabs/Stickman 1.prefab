@@ -61,6 +61,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 8276300354632467040}
   damageState: {fileID: 11400000, guid: a9ab5cbe79a11ab44a800e8daf01fdac, type: 2}
   deathState: {fileID: 11400000, guid: 202446193778bb549adf96c243c7db41, type: 2}
+  rotationLocker: {fileID: 8728466446077605662}
 --- !u!114 &4369308936026181644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ GameObject:
   - component: {fileID: 4203348063506429228}
   - component: {fileID: 8728466446077605662}
   m_Layer: 0
-  m_Name: LockRotator
+  m_Name: RotationLocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
