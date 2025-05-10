@@ -1,6 +1,7 @@
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using System.Collections;
+using static UnityEngine.UI.Image;
 
 public class StickmanView : RandomizedTileObject
 {
@@ -24,6 +25,9 @@ public class StickmanView : RandomizedTileObject
     public float DetectionRadius => detectionRadius;
     private void Awake()
     {
+        damageState = Instantiate(damageState);
+        deathState = Instantiate(deathState);
+
         Car = ServiceLocator.Resolve<CarView>();
         TransitionToState(new IdleState());
         connections += healthProvider.OnDeath.Subscribe(() => TransitionToState(deathState));
